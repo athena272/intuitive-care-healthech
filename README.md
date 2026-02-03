@@ -86,6 +86,10 @@ python main.py
 
 **Saida:** `data/consolidado_despesas.csv` e `data/consolidado_despesas.zip`.
 
+<img width="1247" height="225" alt="image" src="https://github.com/user-attachments/assets/b902f56a-b24f-4c1b-8554-49148b822c67" />
+
+<img width="284" height="278" alt="image" src="https://github.com/user-attachments/assets/bf98acc9-c501-4b96-825d-b6b7580d1d9f" />
+
 ---
 
 ### Teste 2 - Transformacao e Validacao
@@ -103,6 +107,10 @@ python main.py
 
 **Saida:** `data/despesas_agregadas.csv`.
 
+<img width="842" height="168" alt="image" src="https://github.com/user-attachments/assets/ed178fe3-ef52-4fa0-8436-b1a2d1a1a022" />
+
+<img width="224" height="276" alt="image" src="https://github.com/user-attachments/assets/64957c31-f926-433a-bc47-05ab72bd808b" />
+
 ---
 
 ### Teste 3 - Banco de Dados e Analise
@@ -118,6 +126,8 @@ python main.py
 
 Os arquivos gerados ficam em `data/`. As queries analiticas estao em `teste3_banco/queries/analiticas.sql`.
 
+<img width="846" height="547" alt="image" src="https://github.com/user-attachments/assets/2c4f0a6d-1ba2-449f-b317-f44c68ad9620" />
+
 ---
 
 ### Teste 4 - API e Interface Web
@@ -132,6 +142,12 @@ pip install -r requirements.txt
 python -m uvicorn main:app --reload
 ```
 
+<img width="1454" height="739" alt="image" src="https://github.com/user-attachments/assets/7d5a9eee-d0d5-42c8-a5ac-c51da28b3d6c" />
+
+<img width="1031" height="172" alt="image" src="https://github.com/user-attachments/assets/1cc20f1a-f4af-426b-bc19-db9236d7afff" />
+
+<img width="1033" height="434" alt="image" src="https://github.com/user-attachments/assets/8853d648-5bfc-45cb-9410-98bb5fb3f41b" />
+
 **Frontend (porta 5173; proxy para /api no backend):**
 
 ```bash
@@ -139,6 +155,8 @@ cd teste4_api_web/frontend
 npm install
 npm run dev
 ```
+
+<img width="627" height="556" alt="image" src="https://github.com/user-attachments/assets/d355c57c-dcb8-4c7f-b1ad-84575f76f5fd" />
 
 Acesse http://localhost:5173. A colecao Postman esta em `teste4_api_web/postman/API_Operadoras_ANS.postman_collection.json` (variavel `base_url`: http://localhost:8000).
 
