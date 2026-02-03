@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "API Operadoras ANS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar operadoras",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/operadoras?page=1&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["api", "operadoras"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "10" }
+          ]
+        },
+        "description": "Lista operadoras com paginacao. Resposta: { data, total, page, limit }."
+      }
+    },
+    {
+      "name": "Detalhe operadora por CNPJ",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/operadoras/00006037000127",
+          "host": ["{{base_url}}"],
+          "path": ["api", "operadoras", "00006037000127"]
+        },
+        "description": "Retorna registro_ans, cnpj, razao_social, modalidade, uf."
+      }
+    },
+    {
+      "name": "Despesas da operadora",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/operadoras/00006037000127/despesas",
+          "host": ["{{base_url}}"],
+          "path": ["api", "operadoras", "00006037000127", "despesas"]
+        },
+        "description": "Retorna { data: [ { trimestre, ano, valor_despesas } ] }."
+      }
+    },
+    {
+      "name": "Estatisticas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/estatisticas",
+          "host": ["{{base_url}}"],
+          "path": ["api", "estatisticas"]
+        },
+        "description": "Retorna total_despesas, media_despesas, top_5_operadoras, despesas_por_uf."
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8000" }
+  ]
+}
