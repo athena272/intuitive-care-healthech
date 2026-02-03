@@ -56,7 +56,16 @@
   .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
   .search { margin-bottom: 1rem; }
   .search input { padding: 0.5rem 0.75rem; width: 100%; max-width: 400px; border: 1px solid #cbd5e0; border-radius: 4px; }
-  .chart-container { max-width: 500px; margin: 2rem 0; }
+  .chart-container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 380px;
+    margin: 2rem 0;
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
   .card { background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
   .back-link { display: inline-block; margin-bottom: 1rem; color: #3182ce; text-decoration: none; }
   .back-link:hover { text-decoration: underline; }

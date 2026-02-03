@@ -124,8 +124,13 @@ async function carregarStats() {
         },
         options: {
           responsive: true,
+          maintainAspectRatio: true,
+          aspectRatio: 1.8,
           plugins: { legend: { display: false } },
-          scales: { y: { beginAtZero: true } },
+          scales: {
+            y: { beginAtZero: true },
+            x: { ticks: { maxRotation: 45, minRotation: 0 } },
+          },
         },
       });
     }
