@@ -127,6 +127,13 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# Dados locais (cache de downloads e CSVs gerados)
+data/
+
+# Frontend (Vue/Node)
+node_modules/
+teste4_api_web/frontend/dist/
+
 # Environments
 .env
 .venv

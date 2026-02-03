@@ -1,0 +1,14 @@
+# Teste 1 - API ANS
+requests>=2.31.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Teste 2 - Transformação (usa pandas do teste 1)
+
+# Teste 3 - Banco de dados
+psycopg2-binary>=2.9.9
+
+# Teste 4 - API
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-dotenv>=1.0.0
