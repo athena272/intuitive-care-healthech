@@ -37,7 +37,7 @@ Com o ambiente ativado, o prompt mostrara algo como `(.venv)`. Instale as depend
 pip install -r requirements.txt
 ```
 
-A partir daqui, execute os testes (Teste 1 a 4) **com o venv ativado**. Para desativar: `deactivate`.
+A partir daqui, execute os testes (Teste 1 à 4) **com o venv ativado**. Para desativar: `deactivate`.
 
 ---
 
