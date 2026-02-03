@@ -147,6 +147,12 @@ python -m uvicorn main:app --reload
 
 Mantenha esse terminal aberto. A mensagem "Uvicorn running on http://127.0.0.1:8000" indica que a API esta no ar.
 
+<img width="1454" height="739" alt="image" src="https://github.com/user-attachments/assets/7d5a9eee-d0d5-42c8-a5ac-c51da28b3d6c" />
+
+<img width="1031" height="172" alt="image" src="https://github.com/user-attachments/assets/1cc20f1a-f4af-426b-bc19-db9236d7afff" />
+
+<img width="1033" height="434" alt="image" src="https://github.com/user-attachments/assets/8853d648-5bfc-45cb-9410-98bb5fb3f41b" />
+
 **Terminal 2 – Frontend (interface na porta 5173):**  
 No **segundo terminal**, execute (nao e necessario ativar o venv para o frontend):
 
@@ -158,15 +164,15 @@ npm run dev
 
 Mantenha esse terminal aberto. A mensagem "Local: http://localhost:5173/" indica que o frontend esta no ar.
 
-Com os dois rodando, acesse http://localhost:5173 no navegador. O frontend usa um proxy para falar com a API em http://localhost:8000. A colecao Postman esta em `teste4_api_web/postman/API_Operadoras_ANS.postman_collection.json` (variavel `base_url`: http://localhost:8000).
-
-<img width="1454" height="739" alt="image" src="https://github.com/user-attachments/assets/7d5a9eee-d0d5-42c8-a5ac-c51da28b3d6c" />
-
-<img width="1031" height="172" alt="image" src="https://github.com/user-attachments/assets/1cc20f1a-f4af-426b-bc19-db9236d7afff" />
-
-<img width="1033" height="434" alt="image" src="https://github.com/user-attachments/assets/8853d648-5bfc-45cb-9410-98bb5fb3f41b" />
-
 <img width="627" height="556" alt="image" src="https://github.com/user-attachments/assets/d355c57c-dcb8-4c7f-b1ad-84575f76f5fd" />
+
+<img width="1461" height="834" alt="image" src="https://github.com/user-attachments/assets/73f3f616-446f-454a-9d3d-3c5b7fc1be59" />
+
+<img width="512" height="302" alt="image" src="https://github.com/user-attachments/assets/8199183d-2e1d-4127-b9b4-687a9debcf81" />
+
+<img width="1469" height="777" alt="image" src="https://github.com/user-attachments/assets/704c01ef-6464-47ca-bab7-7042cbff0d79" />
+
+Com os dois rodando, acesse http://localhost:5173 no navegador. O frontend usa um proxy para falar com a API em http://localhost:8000. A colecao Postman esta em `teste4_api_web/postman/API_Operadoras_ANS.postman_collection.json` (variavel `base_url`: http://localhost:8000).
 
 ---
 
@@ -199,12 +205,6 @@ Com os dois rodando, acesse http://localhost:5173 no navegador. O frontend usa u
 - **Estatisticas:** Calculadas na hora (sem cache). Dados atualizados com pouca frequencia; consistencia imediata.
 - **Formato de resposta:** Objeto com `data`, `total`, `page`, `limit` nas listas para permitir paginacao no frontend.
 - **Frontend:** Busca/filtro no cliente (na pagina atual). Estado via composables/refs; tabela paginada via API. Grafico de despesas por UF com Chart.js. Tratamento de erros e loading com mensagens genericas (evita expor detalhes internos).
-
----
-
-## Entrega
-
-Compacte todo o projeto em um arquivo ZIP nomeado `Teste_{seu_nome}.zip`, incluindo codigo-fonte, README, requirements.txt, docker-compose.yml, .env.example, pastas teste1_api_ans a teste4_api_web (incluindo frontend e postman), e opcionalmente a pasta `data/` com os CSVs gerados (ou gere-os conforme as instrucoes acima).
 
 ---
 
