@@ -66,7 +66,7 @@ Usuario, senha e nome do banco sao definidos em `.env` (veja `.env.example`). Nu
 
 ---
 
-## Execucao por teste
+## Execução por teste
 
 ### Teste 1 - Integracao com API ANS
 
