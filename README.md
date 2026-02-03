@@ -14,6 +14,32 @@ Implementacao do teste de entrada para estagiarios (v2.0): integracao com API AN
 
 ---
 
+## Ambiente virtual (recomendado)
+
+Use um ambiente virtual para instalar as dependencias do projeto e evitar conflitos com outros pacotes Python (por exemplo Streamlit, Jupyter) instalados no sistema.
+
+**Criar e ativar o venv na raiz do projeto:**
+
+```bash
+# Windows (PowerShell ou CMD)
+python -m venv .venv
+.venv\Scripts\activate
+
+# Linux/macOS
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Com o ambiente ativado, o prompt mostrara algo como `(.venv)`. Instale as dependencias uma unica vez:
+
+```bash
+pip install -r requirements.txt
+```
+
+A partir daqui, execute os testes (Teste 1 a 4) **com o venv ativado**. Para desativar: `deactivate`.
+
+---
+
 ## Como subir o banco (Docker)
 
 Usado no **Teste 3** e **Teste 4**.
@@ -45,12 +71,14 @@ Usuario, senha e nome do banco sao definidos em `.env` (veja `.env.example`). Nu
 
 **Objetivo:** Baixar dados de Demonstracoes Contabeis (Despesas com Eventos/Sinistros) dos ultimos 3 trimestres da API ANS, consolidar em CSV e gerar `consolidado_despesas.zip`.
 
-**Pre-requisitos:** Python 3.10+, dependencias em `requirements.txt`.
+**Pre-requisitos:** Python 3.10+, dependencias em `requirements.txt` (recomendado: ambiente virtual ativado).
 
 **Como rodar:**
 
 ```bash
+# Se ainda nao instalou as dependencias (com venv ativado)
 pip install -r requirements.txt
+
 cd teste1_api_ans
 python main.py
 ```
