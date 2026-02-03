@@ -29,8 +29,9 @@ python -m venv .venv
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-
 Com o ambiente ativado, o prompt mostrara algo como `(.venv)`. Instale as dependencias uma unica vez:
+
+<img width="539" height="165" alt="image" src="https://github.com/user-attachments/assets/eddebd96-6b46-4417-a258-ee624e319d31" />
 
 ```bash
 pip install -r requirements.txt
