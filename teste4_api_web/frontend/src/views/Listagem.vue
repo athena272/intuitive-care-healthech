@@ -12,6 +12,7 @@
     <p v-if="erro" class="error">{{ erro }}</p>
     <p v-else-if="loading" class="loading">Carregando operadoras...</p>
     <template v-else>
+      <div class="table-wrapper">
       <table>
         <thead>
           <tr>
@@ -32,6 +33,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
       <div v-if="!itensFiltrados.length && lista.length" class="loading">Nenhum resultado para o filtro.</div>
       <div class="pagination">
         <button :disabled="page <= 1" @click="page--; carregar()">Anterior</button>

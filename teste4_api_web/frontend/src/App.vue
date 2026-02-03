@@ -40,13 +40,19 @@
   main { padding: 1.5rem 2rem; max-width: 1200px; margin: 0 auto; }
   .loading { color: #666; }
   .error { color: #c53030; }
-  table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -0.25rem;
+  }
+  table { width: 100%; min-width: 600px; border-collapse: collapse; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
   th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
   th { background: #edf2f7; font-weight: 600; }
   tr:hover { background: #f7fafc; }
   .pagination { margin-top: 1rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
   .pagination button {
     padding: 0.5rem 0.75rem;
+    min-height: 44px;
     border: 1px solid #cbd5e0;
     background: #fff;
     cursor: pointer;
@@ -55,7 +61,7 @@
   .pagination button:hover:not(:disabled) { background: #edf2f7; }
   .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
   .search { margin-bottom: 1rem; }
-  .search input { padding: 0.5rem 0.75rem; width: 100%; max-width: 400px; border: 1px solid #cbd5e0; border-radius: 4px; }
+  .search input { padding: 0.5rem 0.75rem; width: 100%; max-width: 400px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 16px; }
   .chart-container {
     width: 100%;
     max-width: 100%;
@@ -67,6 +73,23 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
   .card { background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-  .back-link { display: inline-block; margin-bottom: 1rem; color: #3182ce; text-decoration: none; }
+  .back-link { display: inline-block; margin-bottom: 1rem; padding: 0.5rem 0; min-height: 44px; color: #3182ce; text-decoration: none; }
   .back-link:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    header { padding: 0.75rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    header h1 { font-size: 1.1rem; }
+    main { padding: 1rem; }
+    .search input { max-width: none; }
+    .chart-container { min-height: 280px; padding: 0.75rem; }
+    .card { padding: 1rem; }
+    th, td { padding: 0.5rem 0.4rem; font-size: 0.9rem; }
+    table { min-width: 520px; }
+  }
+
+  @media (max-width: 480px) {
+    header { padding: 0.5rem 0.75rem; }
+    main { padding: 0.75rem; }
+    .chart-container { min-height: 240px; }
+  }
 </style>

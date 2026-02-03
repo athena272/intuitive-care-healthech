@@ -13,22 +13,24 @@
       </div>
       <div class="card">
         <h3>Histórico de despesas por trimestre</h3>
-        <table v-if="despesas.length">
-          <thead>
-            <tr>
-              <th>Ano</th>
-              <th>Trimestre</th>
-              <th>Valor (R$)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="d in despesas" :key="d.ano + '-' + d.trimestre">
-              <td>{{ d.ano }}</td>
-              <td>{{ d.trimestre }}</td>
-              <td>{{ formatValor(d.valor_despesas) }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div v-if="despesas.length" class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Ano</th>
+                <th>Trimestre</th>
+                <th>Valor (R$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="d in despesas" :key="d.ano + '-' + d.trimestre">
+                <td>{{ d.ano }}</td>
+                <td>{{ d.trimestre }}</td>
+                <td>{{ formatValor(d.valor_despesas) }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p v-else class="loading">Nenhum dado de despesas.</p>
       </div>
     </template>
