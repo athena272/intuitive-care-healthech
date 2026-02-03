@@ -35,7 +35,10 @@ def main():
     cur = conn.cursor()
     for i, block in enumerate(blocks):
         block = block.strip()
-        if not block or block.startswith("--") and "Query" not in block[:50]:
+        if not block:
+            continue
+        # Nao pular blocos que sao queries (WITH ou SELECT), mesmo que comecem com comentario
+        if block.startswith("--") and "WITH" not in block and "SELECT" not in block:
             continue
         stmt = block if block.rstrip().endswith(";") else block + ";"
         try:

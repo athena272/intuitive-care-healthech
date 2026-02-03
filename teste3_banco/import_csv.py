@@ -15,7 +15,7 @@ from psycopg2.extras import execute_values
 # Carrega .env da raiz do projeto
 try:
     from dotenv import load_dotenv
-    load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env")
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 except ImportError:
     pass
 
